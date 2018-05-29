@@ -10,10 +10,8 @@ class Song
     self.class.all << self #instance method that goes back to class variable all??
   end
 
-  def self.create(name,artist_name)
-    song=self.class.new
-    song.name=name
-    song.artist_name.artist_name
+  def self.create
+    song=self.class.new    
     song.save
     song
   end
