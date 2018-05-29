@@ -18,10 +18,11 @@ class Song
 
   def self.new_by_name(name)
     song=Song.new
-    song.name=name
-    song.save
+    song.name=name    
     song
   end
+
+  def self.create_by_name()
 
 
 end
