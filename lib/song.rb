@@ -15,6 +15,7 @@ class Song
     song.name=name
     song.artist_name.artist_name
     song.save
+    song
   end
 
 end
