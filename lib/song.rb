@@ -57,7 +57,7 @@ class Song
     art_name=no_extension.split(" - ")[0]
     song_name=no_extension.split(" - ")[1]
     song=Song.new_by_name(song_name)
-    song.artist_name=art_name  
+    song.artist_name=art_name
     song
   end
 
@@ -65,8 +65,8 @@ class Song
     song=Song.new_from_filename(filename)
     song.save
   end
-  
-    
+
+
 
 
 end
