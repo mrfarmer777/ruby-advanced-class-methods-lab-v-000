@@ -47,6 +47,11 @@ class Song
       res
     end
   end
-      
+
+  def self.alphabetical
+    res=@@all.sort_by {|song| song.name}
+  end
+    
+
 
 end
