@@ -51,6 +51,17 @@ class Song
   def self.alphabetical
     res=@@all.sort_by {|song| song.name}
   end
+
+  def self.new_from_filename(filename)
+    no_extension=filename.split(".")[0]
+    art_name=no_extension.split(" - ")[0]
+    song_name=no_extension.split(" - ")[1]
+    song=Song.new_by_name(song_name)
+    song.artist_name=art_name
+    song.save
+    song
+  end
+  
     
 
 
