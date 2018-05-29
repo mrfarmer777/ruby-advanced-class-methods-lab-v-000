@@ -29,14 +29,16 @@ class Song
     song
   end
 
-  def self.find_by_name(namest)
+  def self.find_by_name(name)
     res=""
     @@all.each do |song|
-      if song.name==namest
+      if song.name==name
         res=song
       end
     end
     res
   end
+
+  def self.find_or_create_by_name(name)
 
 end
