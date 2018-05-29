@@ -30,7 +30,7 @@ class Song
   end
 
   def self.find_by_name(name)
-    res=""
+    res=nil
     @@all.each do |song|
       if song.name==name
         res=song
@@ -40,5 +40,13 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
+    res=Song.find_by_name(name)
+    if res==nil
+      Song.create_by_name(name)
+    else
+      res
+    end
+  end
+      
 
 end
